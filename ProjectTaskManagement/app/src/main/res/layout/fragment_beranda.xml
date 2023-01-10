@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.BerandaFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="25dp"
+        android:id="@+id/recyletugas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        tools:listitem="@layout/card"
+        android:paddingStart="17dp"
+        android:paddingEnd="17dp"/>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/nodata"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/img_kosong"
+            android:layout_gravity="center"
+            android:layout_width="166dp"
+            android:layout_height="145dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Belum ada tugas"
+            android:textSize="16dp"
+            android:textColor="@color/ungu"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

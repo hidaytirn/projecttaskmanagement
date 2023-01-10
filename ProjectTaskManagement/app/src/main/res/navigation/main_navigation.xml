@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/berandaFragment">
+
+    <fragment
+        android:id="@+id/berandaFragment"
+        android:name="com.D121201068.taskmanagement.fragments.BerandaFragment"
+        android:label="fragment_beranda"
+        tools:layout="@layout/fragment_beranda" >
+        <action
+            android:id="@+id/action_berandaFragment_to_riwayatFragment"
+            app:destination="@id/riwayatFragment" />
+        <action
+            android:id="@+id/action_berandaFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+        <action
+            android:id="@+id/action_berandaFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <argument
+            android:name="currentTugas"
+            app:argType="com.D121201068.taskmanagement.model.Tugas" />
+    </fragment>
+    <fragment
+        android:id="@+id/riwayatFragment"
+        android:name="com.D121201068.taskmanagement.fragments.RiwayatFragment"
+        android:label="fragment_riwayat"
+        tools:layout="@layout/fragment_riwayat" >
+        <action
+            android:id="@+id/action_riwayatFragment_to_berandaFragment"
+            app:destination="@id/berandaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.D121201068.taskmanagement.fragments.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" >
+        <action
+            android:id="@+id/action_editFragment_to_berandaFragment"
+            app:destination="@id/berandaFragment" />
+        <argument
+            android:name="currentTugas"
+            app:argType="com.D121201068.taskmanagement.model.Tugas" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.D121201068.taskmanagement.fragments.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment_to_berandaFragment"
+            app:destination="@id/berandaFragment" />
+        <argument
+            android:name="currentTugas"
+            app:argType="com.D121201068.taskmanagement.model.Tugas" />
+    </fragment>
+</navigation>
